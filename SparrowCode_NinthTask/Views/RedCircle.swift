@@ -8,18 +8,24 @@
 import SwiftUI
 
 struct RedCircle: View {
+    @Binding var offset: CGSize
     var body: some View {
         ZStack {
             Circle()
                 .fill(.red)
             .frame(width: 100)
+            .offset(offset)
+            .gesture(DragGesture().onChanged({ gestureData in
+                offset = gestureData.translation
+            }).onEnded({ _ in
+                withAnimation(.spring(duration: 0.5, bounce: 0.5, blendDuration: 0.25)) {
+                    offset = .zero
+                }
+            }))
             Image(systemName: "cloud.sun.rain.fill")
                 .foregroundStyle(.white)
                 .font(.title)
+                .offset(offset)
         }
     }
-}
-
-#Preview {
-    RedCircle()
 }

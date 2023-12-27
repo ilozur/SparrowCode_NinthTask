@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var offset: CGSize = .zero
+    
     var body: some View {
         VStack {
-            RedCircle()
-            YellowCircle()
+            RedCircle(offset: $offset)
+            YellowCircle(offset: $offset)
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
