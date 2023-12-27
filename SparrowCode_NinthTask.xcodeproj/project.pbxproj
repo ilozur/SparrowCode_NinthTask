@@ -11,6 +11,8 @@
 		BE3EAA9D2B3C3BF100A46CD9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EAA9C2B3C3BF100A46CD9 /* ContentView.swift */; };
 		BE3EAA9F2B3C3BF200A46CD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE3EAA9E2B3C3BF200A46CD9 /* Assets.xcassets */; };
 		BE3EAAA22B3C3BF200A46CD9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE3EAAA12B3C3BF200A46CD9 /* Preview Assets.xcassets */; };
+		BE3EAAAA2B3C3C6900A46CD9 /* RedCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EAAA92B3C3C6900A46CD9 /* RedCircle.swift */; };
+		BE3EAAAC2B3C3C7400A46CD9 /* YellowCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EAAAB2B3C3C7400A46CD9 /* YellowCircle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		BE3EAA9C2B3C3BF100A46CD9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BE3EAA9E2B3C3BF200A46CD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE3EAAA12B3C3BF200A46CD9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BE3EAAA92B3C3C6900A46CD9 /* RedCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedCircle.swift; sourceTree = "<group>"; };
+		BE3EAAAB2B3C3C7400A46CD9 /* YellowCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowCircle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,8 @@
 		BE3EAA992B3C3BF100A46CD9 /* SparrowCode_NinthTask */ = {
 			isa = PBXGroup;
 			children = (
+				BE3EAAA82B3C3C5200A46CD9 /* Views */,
 				BE3EAA9A2B3C3BF100A46CD9 /* SparrowCode_NinthTaskApp.swift */,
-				BE3EAA9C2B3C3BF100A46CD9 /* ContentView.swift */,
 				BE3EAA9E2B3C3BF200A46CD9 /* Assets.xcassets */,
 				BE3EAAA02B3C3BF200A46CD9 /* Preview Content */,
 			);
@@ -65,6 +69,16 @@
 				BE3EAAA12B3C3BF200A46CD9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BE3EAAA82B3C3C5200A46CD9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE3EAA9C2B3C3BF100A46CD9 /* ContentView.swift */,
+				BE3EAAA92B3C3C6900A46CD9 /* RedCircle.swift */,
+				BE3EAAAB2B3C3C7400A46CD9 /* YellowCircle.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +153,8 @@
 			files = (
 				BE3EAA9D2B3C3BF100A46CD9 /* ContentView.swift in Sources */,
 				BE3EAA9B2B3C3BF100A46CD9 /* SparrowCode_NinthTaskApp.swift in Sources */,
+				BE3EAAAA2B3C3C6900A46CD9 /* RedCircle.swift in Sources */,
+				BE3EAAAC2B3C3C7400A46CD9 /* YellowCircle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
