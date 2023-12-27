@@ -8,16 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var offset: CGSize = .zero
+    @State var cricleOffset: CGSize = .zero
     
     var body: some View {
         ZStack {
-            RedCircle(offset: $offset)
-            YellowCircle(offset: $offset)
+            RedCircle(cricleOffset: $cricleOffset)
+            YellowCircle(cricleOffset: $cricleOffset)
         }
-        .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(.black)
+        .overlay {
+            Color(white: 0.5)
+                .blendMode(.colorBurn)
+                .allowsHitTesting(false)
+            
+            Color(white: 1)
+                .blendMode(.colorDodge)
+                .allowsHitTesting(false)
+            
+            RadialGradient(colors: [.yellow, .red], center: .center, startRadius: 150 / 2, endRadius: 175)
+                .blendMode(.lighten)
+                .allowsHitTesting(false)
+        }
         .ignoresSafeArea()
     }
 }

@@ -8,24 +8,24 @@
 import SwiftUI
 
 struct YellowCircle: View {
-    @Binding var offset: CGSize
+    @Binding var cricleOffset: CGSize
     var body: some View {
         ZStack {
             Circle()
-                .fill(.yellow)
-            .frame(width: 100)
-            .offset(offset)
-            .gesture(DragGesture().onChanged({ gestureData in
-                offset = gestureData.translation
-            }).onEnded({ _ in
-                withAnimation(.spring(duration: 0.5, bounce: 0.5, blendDuration: 0.25)) {
-                    offset = .zero
+                .fill(.black)
+                .frame(width: 150)
+                .blur(radius: 25)
+                .overlay {
+                    Image(systemName: "cloud.sun.rain.fill")
+                        .resizable()
+                        .padding(25)
+//                        .symbolRenderingMode(.hierarchical)
+                        .font(.title)
+                        .foregroundStyle(.white)
+                        .offset(cricleOffset)
+                        .allowsHitTesting(false)
                 }
-            }))
-            Image(systemName: "cloud.sun.rain.fill")
-                .foregroundStyle(.white)
-                .font(.title)
-                .offset(offset)
+                .allowsHitTesting(false)
         }
     }
 }
